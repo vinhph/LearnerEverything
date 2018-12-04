@@ -25,11 +25,11 @@ namespace AsyncNAwait
             //ButtonClick(2);
             //ButtonClick(3);
 
-            TestMultiTask();            
+            //TestMultiTask();            
             //TestMultiTaskSynchronourlyType();
             //TestMultiTaskWhenAll();
 
-            //TestMultiTaskNotWhenAll();
+            TestMultiTaskNotWhenAll();
 
             Console.WriteLine("End");
         }
@@ -112,8 +112,8 @@ namespace AsyncNAwait
 
             //await Task.WhenAll(result1, result2, result3);
 
-            Console.WriteLine(result2.Result);
             Console.WriteLine(result1.Result);
+            Console.WriteLine(result2.Result);
             Console.WriteLine(result3.Result);
         }
 

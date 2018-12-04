@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncNAwait", "AsyncNAwait\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{13C16A78-4789-4ADD-9994-545978A4AE4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4NetPrj", "Log4NetPrj\Log4NetPrj.csproj", "{A8EE85EB-BF42-4287-9741-B3CEA3EC8922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingAutofac", "UsingAutofac\UsingAutofac.csproj", "{42D469A0-84C8-4110-869A-7661997A9D86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{13C16A78-4789-4ADD-9994-545978A4AE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C16A78-4789-4ADD-9994-545978A4AE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C16A78-4789-4ADD-9994-545978A4AE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EE85EB-BF42-4287-9741-B3CEA3EC8922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EE85EB-BF42-4287-9741-B3CEA3EC8922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EE85EB-BF42-4287-9741-B3CEA3EC8922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EE85EB-BF42-4287-9741-B3CEA3EC8922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D469A0-84C8-4110-869A-7661997A9D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D469A0-84C8-4110-869A-7661997A9D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D469A0-84C8-4110-869A-7661997A9D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D469A0-84C8-4110-869A-7661997A9D86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
