@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4NetPrj", "Log4NetPrj\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingAutofac", "UsingAutofac\UsingAutofac.csproj", "{42D469A0-84C8-4110-869A-7661997A9D86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingAutofac.MVC.Example", "UsingAutofac.MVC.Example\UsingAutofac.MVC.Example.csproj", "{E90EDFE0-D4E0-4568-B122-66FFDB6ABF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingAutofac.WebForm.Example", "UsingAutofac.WebForm.Example\UsingAutofac.WebForm.Example.csproj", "{1B1C724C-CAC7-40B5-8703-34FE7E026016}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{42D469A0-84C8-4110-869A-7661997A9D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D469A0-84C8-4110-869A-7661997A9D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D469A0-84C8-4110-869A-7661997A9D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90EDFE0-D4E0-4568-B122-66FFDB6ABF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90EDFE0-D4E0-4568-B122-66FFDB6ABF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90EDFE0-D4E0-4568-B122-66FFDB6ABF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90EDFE0-D4E0-4568-B122-66FFDB6ABF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1C724C-CAC7-40B5-8703-34FE7E026016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1C724C-CAC7-40B5-8703-34FE7E026016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1C724C-CAC7-40B5-8703-34FE7E026016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1C724C-CAC7-40B5-8703-34FE7E026016}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
