@@ -48,6 +48,13 @@
     <Compile Include="ConsoleOutput.cs" />
     <Compile Include="GigyaAppSetting.cs" />
     <Compile Include="GigyaAppSettingModule.cs" />
+    <Compile Include="Models\ConfigReader.cs" />
+    <Compile Include="Models\IConfigReader.cs" />
+    <Compile Include="Models\ILogger.cs" />
+    <Compile Include="Models\ConsoleLogger.cs" />
+    <Compile Include="Models\MyComponent.cs" />
+    <Compile Include="Models\StringWriter.cs" />
+    <Compile Include="Models\TextWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodayWriter.cs" />
