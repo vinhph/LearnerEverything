@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using UsingAutofac.WebForm.Example.Bussiness;
 using UsingAutofac.WebForm.Example.Models;
 
 namespace UsingAutofac.WebForm.Example
@@ -24,7 +25,8 @@ namespace UsingAutofac.WebForm.Example
             //setup autofac
             var builder = new ContainerBuilder();
             builder.RegisterType<WebFormLog>().As<ILog>();
-
+            builder.RegisterType<MyProduct>().As<IMyProduct>();
+            builder.RegisterType<MyRepository>().As<IMyRepository>();
             // Once you're done registering things, set the container
             // provider up with your registrations.
             _containerProvider = new ContainerProvider(builder.Build());

@@ -78,6 +78,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\CreatCart.cs" />
+    <Compile Include="Bussiness\MyCart.cs" />
+    <Compile Include="Bussiness\MyProduct.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -89,6 +92,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ILog.cs" />
+    <Compile Include="Models\IMyRepository.cs" />
+    <Compile Include="Models\MyRepository.cs" />
     <Compile Include="Models\WebFormLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
