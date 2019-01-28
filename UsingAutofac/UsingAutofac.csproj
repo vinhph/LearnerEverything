@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\MyPropertyInjection.cs" />
     <Compile Include="CarTransportModule.cs" />
     <Compile Include="ConsoleOutput.cs" />
     <Compile Include="GigyaAppSetting.cs" />

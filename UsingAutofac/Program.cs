@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
+using UsingAutofac.Bussiness;
 using UsingAutofac.Models;
 
 namespace UsingAutofac
@@ -68,16 +69,36 @@ namespace UsingAutofac
             //}
 
             //Instance Components
-            var output = new StringWriter();
-            builder.RegisterInstance(output)
-                   .As<TextWriter>()
-                   .ExternallyOwned();
+            //var output = new StringWriter();
+            //builder.RegisterInstance(output)
+            //       .As<TextWriter>()
+            //       .ExternallyOwned();
+            //var container = builder.Build();
+            //using (var scope = container.BeginLifetimeScope())
+            //{
+            //    var reader = scope.Resolve<TextWriter>();
+            //    reader.Print();
+            //}
+
+            //PropertyInjection
+            //string username = "olala";
+            //builder.RegisterInstance(username);
+            //builder.RegisterType<MyPropertyInjection>().PropertiesAutowired();
+            //builder.Register(c => new MyPropertyInjection { UserName = "PropertyInjection" });
+            //builder.Register(c => new MyPropertyInjection()).OnActivated(e => e.Instance.UserName = "PropertyInjection");
+            builder.Register(c => new ConfigReader("PropertyInjection")).As<IConfigReader>();
+            builder.Register(c => new MyPropertyInjection()).OnActivated(e => e.Instance.ConfigReader = e.Context.Resolve<IConfigReader>());
+
+
+
             var container = builder.Build();
             using (var scope = container.BeginLifetimeScope())
             {
-                var reader = scope.Resolve<TextWriter>();
-                reader.Print();
+                var reader = scope.Resolve<MyPropertyInjection>();
+                reader.Log();
             }
+            
+            Console.WriteLine("Done");
             Console.Read();
         }
 
