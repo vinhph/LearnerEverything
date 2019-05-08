@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingAutofac.WebForm.Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBusMessageQueue", "ServiceBusMessageQueue\ServiceBusMessageQueue.csproj", "{63CDA3CB-64D4-41F2-8145-D45C16909176}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopshelfService", "TopshelfService\TopshelfService.csproj", "{F5121863-1621-41C5-9923-06BC1CB46CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{63CDA3CB-64D4-41F2-8145-D45C16909176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63CDA3CB-64D4-41F2-8145-D45C16909176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63CDA3CB-64D4-41F2-8145-D45C16909176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5121863-1621-41C5-9923-06BC1CB46CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5121863-1621-41C5-9923-06BC1CB46CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5121863-1621-41C5-9923-06BC1CB46CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5121863-1621-41C5-9923-06BC1CB46CCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
