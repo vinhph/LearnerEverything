@@ -37,6 +37,12 @@ namespace ServiceBusMessageQueue.AutofacModule
         /// <param name="builder">The builder.</param>
         protected override void Load(ContainerBuilder builder)
         {
+            // register each consumer manually
+            //builder.RegisterType<YourConsumer>().As<IConsumer>();
+
+            //or use Autofac's scanning capabilities -- SomeClass is any class in the correct assembly
+            //builder.RegisterAssemblyTypes(typeof(SomeClass).Assembly).As<IConsumer>();
+
 
             builder.Register(
                 c => ServiceBusFactory.New(
