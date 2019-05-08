@@ -4,10 +4,10 @@ namespace ServiceBusMessageQueue
 {
     class Program
     {
-        //msmq://cl-vinhpham/private$/HardWorkingQueue
         static void Main(string[] args)
         {
-            BasicOfMassTransit.Run();
+            //BasicOfMassTransit.Run();
+            new AdvanceOfMassTransit().Run();
 
             Console.WriteLine("Done");
             Console.ReadLine();

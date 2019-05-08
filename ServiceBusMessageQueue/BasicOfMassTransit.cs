@@ -12,7 +12,7 @@ namespace ServiceBusMessageQueue
             IServiceBus busCustomer = ServiceBusFactory.New(sbc =>
             {
                 sbc.UseMsmq(configurator => configurator.VerifyMsmqConfiguration());
-                sbc.ReceiveFrom("msmq://cl-vinhpham/HardWorkingQueue");//msmq://localhost/delonghiService
+                sbc.ReceiveFrom(QueueUtility.QueueName);//msmq://localhost/delonghiService
                 sbc.Subscribe(subs =>
                 {
                     subs.Consumer<CustomerConsumer>();
@@ -22,7 +22,7 @@ namespace ServiceBusMessageQueue
             IServiceBus busStudent = ServiceBusFactory.New(sbc =>
             {
                 sbc.UseMsmq(configurator => configurator.VerifyMsmqConfiguration());
-                sbc.ReceiveFrom("msmq://cl-vinhpham/HardWorkingQueue");//msmq://localhost/delonghiService
+                sbc.ReceiveFrom(QueueUtility.QueueName);//msmq://localhost/delonghiService
                 sbc.Subscribe(subs =>
                 {
                     subs.Consumer<StudentConsumer>();

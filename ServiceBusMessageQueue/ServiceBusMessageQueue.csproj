@@ -34,6 +34,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>DLL\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>DLL\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extras.DynamicProxy2">
+      <HintPath>DLL\Autofac.Extras.DynamicProxy2.dll</HintPath>
+    </Reference>
     <Reference Include="Magnum, Version=2.1.2.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Magnum.dll</HintPath>
@@ -65,6 +74,7 @@
     <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,6 +83,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvanceOfMassTransit.cs" />
+    <Compile Include="AutofacModule\RegistrationModule.cs" />
     <Compile Include="BasicOfMassTransit.cs" />
     <Compile Include="Consumers\StudentConsumer.cs" />
     <Compile Include="Consumers\CustomerConsumer.cs" />
@@ -80,19 +92,11 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DLL\Magnum.dll" />
-    <Content Include="DLL\MassTransit.AutofacIntegration.dll" />
-    <Content Include="DLL\MassTransit.dll" />
-    <Content Include="DLL\MassTransit.Log4NetIntegration.dll" />
-    <Content Include="DLL\MassTransit.NHibernateIntegration.dll" />
-    <Content Include="DLL\MassTransit.Reactive.dll" />
-    <Content Include="DLL\MassTransit.Transports.MSMQ.dll" />
+    <Compile Include="QueueUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DLL\MassTransit.AutofacIntegration.zip" />
+    <None Include="DLL\DLL.zip" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
