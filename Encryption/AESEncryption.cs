@@ -40,10 +40,13 @@ namespace Encryption
             aesEncryption.Mode = CipherMode.CBC;
             aesEncryption.Padding = PaddingMode.PKCS7;
             aesEncryption.IV = Convert.FromBase64String(ASCIIEncoding.UTF8.GetString(Convert.FromBase64String(iCompleteEncodedKey)).Split(',')[0]);
+            var iv = ByteArrayToString(aesEncryption.IV);
             aesEncryption.Key = Convert.FromBase64String(ASCIIEncoding.UTF8.GetString(Convert.FromBase64String(iCompleteEncodedKey)).Split(',')[1]);
+            var key = ByteArrayToString(aesEncryption.Key);
             byte[] plainText = ASCIIEncoding.UTF8.GetBytes(iPlainStr);
             ICryptoTransform crypto = aesEncryption.CreateEncryptor();
             byte[] cipherText = crypto.TransformFinalBlock(plainText, 0, plainText.Length);
+            var hex = ByteArrayToString(cipherText);
             return Convert.ToBase64String(cipherText);
         }
 
@@ -63,6 +66,13 @@ namespace Encryption
             ICryptoTransform decrypto = aesEncryption.CreateDecryptor();
             byte[] encryptedBytes = Convert.FromBase64CharArray(iEncryptedText.ToCharArray(), 0, iEncryptedText.Length);
             return ASCIIEncoding.UTF8.GetString(decrypto.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length));
+        }
+        public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+                hex.AppendFormat("{0:x2} ", b);
+            return hex.ToString();
         }
     }
 }
