@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AESEncryption.cs" />
     <Compile Include="Base64Encryption.cs" />
+    <Compile Include="Base64URLUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

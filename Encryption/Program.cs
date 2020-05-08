@@ -9,7 +9,7 @@ namespace Encryption
     {
         static void Main(string[] args)
         {
-            string plainStr = "629340361";
+            string plainStr = "543184106";
             //
             //
             //
@@ -24,10 +24,12 @@ namespace Encryption
             string encryptedText = AESEncryption.Encrypt(plainStr, completeEncodedKey, keySize);
             Console.WriteLine("Encrypted Text: {0}", encryptedText);
             //encryptedText = Base64Encryption.Base64Encode(encryptedText);
-            //Console.WriteLine("Encode Base64 Text: {0}", encryptedText);
+            encryptedText = Base64URLUtil.Encode(encryptedText);
+            Console.WriteLine("Encode Base64 Text: {0}", encryptedText);
             //string decrypted = Base64Encryption.Base64Decode(encryptedText);
-            //Console.WriteLine("Decode Base64 Text: {0}", decrypted);
-            string decrypted = AESEncryption.Decrypt(encryptedText, completeEncodedKey, keySize);
+            string decrypted = Base64URLUtil.Decode(encryptedText);
+            Console.WriteLine("Decode Base64 Text: {0}", decrypted);
+            decrypted = AESEncryption.Decrypt(decrypted, completeEncodedKey, keySize);
             Console.WriteLine("Decrypted Text: {0}", decrypted);
             Console.Read();
         }
